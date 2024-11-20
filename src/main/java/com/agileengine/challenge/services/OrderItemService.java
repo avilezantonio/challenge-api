@@ -19,7 +19,6 @@ import java.util.List;
 @RequiredArgsConstructor
 public class OrderItemService {
     private final OrderItemRepository orderItemRepository;
-    private final ProductRepository productRepository;
     private final ModelMapper modelMapper;
 
     public List<OrderItemResponseDto> getOrderItems() {

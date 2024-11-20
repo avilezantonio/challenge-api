@@ -11,6 +11,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.modelmapper.ModelMapper;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.math.BigDecimal;
@@ -44,7 +45,7 @@ public class OrderItemServiceUnitTest {
         orderItemService.createOrderItem(orderItemRequestDto);
 
         Mockito.verify(orderItemRepository, Mockito.times(1)).save(Mockito.any(OrderItem.class));
-        Mockito.verify(modelMapper, Mockito.times(1)).map(orderItemRequestDto, Order.class);
+        Mockito.verify(modelMapper, Mockito.times(1)).map(orderItemRequestDto, OrderItem.class);
     }
 
     @Test

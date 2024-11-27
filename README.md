@@ -9,25 +9,36 @@ Project created based on the assesment provided by agile engine
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone git@github.com:avilezantonio/challenge-api.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd my-project
+  cd challenge-api
 ```
 
-Install dependencies
+Run the Postgres Container
 
 ```bash
-  npm install
+  docker compose up -d challenge_db
 ```
 
-Start the server
+Create the Jar file
 
 ```bash
-  npm run start
+  ./mvnw clean package -DskipTests
+```
+
+Build it
+
+```bash
+  docker compose build
+```
+
+Run the api
+```bash
+  docker compose up challenge_api
 ```
 
 
@@ -36,6 +47,14 @@ Start the server
 To run tests, run the following command
 
 ```bash
-  npm run test
+  ./mvnw test
+```
+
+## Swagger ui
+
+To view Open Api definition run the project and then open the follow url
+
+```
+http://localhost:8080/swagger-ui/index.html
 ```
 

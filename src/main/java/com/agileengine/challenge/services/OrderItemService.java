@@ -4,7 +4,6 @@ import com.agileengine.challenge.dtos.OrderItemRequestDto;
 import com.agileengine.challenge.dtos.OrderItemResponseDto;
 import com.agileengine.challenge.entities.OrderItem;
 import com.agileengine.challenge.repositories.OrderItemRepository;
-import com.agileengine.challenge.repositories.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;

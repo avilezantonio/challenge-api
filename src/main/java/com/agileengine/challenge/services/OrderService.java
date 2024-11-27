@@ -1,6 +1,6 @@
 package com.agileengine.challenge.services;
 
-import com.agileengine.challenge.dtos.OrderItemResponseDto;
+import com.agileengine.challenge.dtos.OrderItemRequestDto;
 import com.agileengine.challenge.dtos.OrderRequestDto;
 import com.agileengine.challenge.dtos.OrderResponseDto;
 import com.agileengine.challenge.entities.*;
@@ -70,7 +70,7 @@ public class OrderService {
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
 
-    private List<OrderItem> buildItems(Order order, List<OrderItemResponseDto> items) {
+    private List<OrderItem> buildItems(Order order, List<OrderItemRequestDto> items) {
         return items.stream()
                 .map(item -> {
                     final OrderItem orderItem = modelMapper.map(item, OrderItem.class);

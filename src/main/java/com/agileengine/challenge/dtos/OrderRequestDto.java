@@ -9,14 +9,14 @@ import java.util.List;
 
 @Getter
 @Setter
-public class OrderRequestDto extends BaseResponseDto {
+public class OrderRequestDto {
 
     @NotNull
     private Long userId;
     @NotNull
     private Long clientId;
     private Status status = Status.DRAFT;
-    private List<OrderItemResponseDto> items = List.of();
+    private List<OrderItemRequestDto> items = List.of();
 
 }
 

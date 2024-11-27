@@ -2,10 +2,7 @@ package com.agileengine.challenge.services;
 
 
 import com.agileengine.challenge.dtos.ProductRequestDto;
-import com.agileengine.challenge.entities.Client;
-import com.agileengine.challenge.entities.Order;
 import com.agileengine.challenge.entities.Product;
-import com.agileengine.challenge.entities.User;
 import com.agileengine.challenge.repositories.ProductRepository;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
